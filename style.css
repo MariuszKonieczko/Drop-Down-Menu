@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#menu {
+  display: flex;
+}
+
+#menu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+#menu a:visited {
+  color: white;
+}
+
+#menu a:link {
+  color: white;
+}
+
+#menu li {
+  list-style: none;
+  flex-grow: 1;
+}
+
+#menu > li > a {
+  padding: 25px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 155, 234, 0.8) 0%,
+    rgba(18, 79, 140, 0.8) 100%
+  );
+  font-family: Stoke, sans;
+  text-align: center;
+  transition: 0.2s;
+}
+
+#menu > li > a:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 155, 234, 0.9) 0%,
+    rgba(18, 79, 140, 0.9) 100%
+  );
+  color: #2e3c2e;
+  cursor: pointer;
+}
+
+#menu > li:first-child > a {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#menu > li:last-child > a {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+#menu > li ul li a {
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+#menu > li ul li a:hover {
+  color: #2e3c2e;
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 155, 234, 0.9) 0%,
+    rgba(18, 79, 140, 0.9) 100%
+  );
+}
+
+#menu > li ul {
+  transition: 0.5s;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 155, 234, 0.8) 0%,
+    rgba(18, 79, 140, 0.8) 100%
+  );
+  border-left: 1px solid #ccc;
+  position: absolute;
+  font-size: 12px;
+}
+
+#menu > li:hover ul {
+  opacity: 1;
+}
